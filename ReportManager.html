@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Values</title>
+    <link rel="stylesheet" href="ReportManager.css">
+</head>
+<body>
+    <div class="mainpage">
+
+        <div class="top-bar">
+            <a>BES LOST AND FOUND SYSTEM</a>
+        </div>
+
+        <div class="content">
+
+            <div class="sidebar">Left Sidebar
+                <a href="report.html"> Report page</a>
+            </div>
+            <div class="main-content">
+                <div class="input-section">
+                    <input type="text" id="nameInput" placeholder="Name">
+                    <input type="text" id="gradeInput" placeholder="Grade">
+                    <input type="text" id="sectionInput" placeholder="Section">
+                    <input type="email" id="emailInput" placeholder="Email">
+                    <input type="text" id="itemNameInput" placeholder="Item Name">
+                    <input type="date" id="dateFoundInput">
+                    <input type="file" id="imageInput" accept="image/*">
+                    <textarea id="descriptionInput" placeholder="Item Description"></textarea>
+                    <button onclick="addInfoContainer()">Submit</button>
+                </div>
+
+                <div id="currentMonth" class="current-month"><h1>MAY 2024</h1></div>
+           
+            </div>
+        </div>
+    </div>
+    
+    <script src="ReportManager.js"></script>
+</body>
+</html>

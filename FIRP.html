@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lost item reporting page</title>
+    <link rel="stylesheet" href="FIRP.css">
+</head>
+<body>
+
+    <div class="top-plane">
+        <h1>REPORT FOUND ITEM</h1>
+        <p>kindly fill out the following and follow the instructions given</p>
+    </div>
+
+    <div class="mid-plane">
+        <div class="maincontainer1">
+            <div class="container1" id="formContainer1">
+                <form class="userForm" id="userForm1" method="POST">
+                
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter Your Name...">
+                    </div>
+                    
+                    <div class="form-group" id="sectionGroup" style = "display: none;">
+                        <label for="section">Section:</label>
+                        <select id="section" name="section">
+                            <!-- Section options will be populated dynamically based on the selection in the Grade dropdown -->
+                        </select>
+                    </div>
+
+                    <!-- Item Found Info -->
+                    <div class="form-group">
+                        <label for="ItemName">Item Name:</label>
+                        <input type="text" id="ItemName" name="ItemName" required placeholder="Enter the Name of Item...">
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="container2" id="formContainer2">
+                <form class="userForm" id="userForm2" method="POST">
+                
+                    <div class="form-group">
+                        <label for="grade">Grade:</label>
+                        <select id="grade" name="grade" onchange="updateTertiaryCategory()">
+                            <option value="" disabled selected>Select your Grade</option>
+                            <option value="CASA">CASA</option>
+                            <option value="1">Grade 1</option>
+                            <option value="2">Grade 2</option>
+                            <option value="3">Grade 3</option>
+                            <option value="4">Grade 4</option>
+                            <option value="5">Grade 5</option>
+                            <option value="6">Grade 6</option>
+                            <option value="7">Grade 7</option>
+                            <option value="8">Grade 8</option>
+                            <option value="9">Grade 9</option>
+                            <option value="10">Grade 10</option>
+                            <option value="11">Grade 11</option>
+                            <option value="12">Grade 12</option>
+                        </select>
+                    </div>
+                    
+                    <div class="date-input">
+                        <label for="ItemFoundDate"> Date Found:</label>
+                        <input type="date" id="ItemFoundDate" name="ItemFoundDate">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <div class="maincontainer2">
+
+            <div class="input-div">
+                <label for="ItemDescription"> Item Description:</label>
+                <textarea id="ItemDescription" name="ItemDescription" rows="3" placeholder="Enter Item Description..."></textarea>
+            </div>
+
+            <div class="image-input-div">
+                <input type="file" id="image-upload" name="image-upload" accept="image/*">
+                <label for="image-upload">Click here to upload an image</label>
+            </div>
+            
+            <input type="submit" value="Submit">
+        </div>  
+    </div>
+    <script src="FIRP.js"></script>
+
+</body>
+</html>
